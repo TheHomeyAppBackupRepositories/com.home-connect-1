@@ -1,0 +1,398 @@
+{
+  "door": "Deur",
+  "interior": "Binnenkant",
+  "fridge": "Koelkast",
+  "freezer": "vriezer",
+  "LaundryCare": {
+    "Washer": {
+      "Program": {
+        "Cotton": {
+          "name": "Katoen"
+        },
+        "EasyCare": {
+          "name": "EasyCare"
+        },
+        "Mix": {
+          "name": "Mix"
+        },
+        "DelicatesSilk": {
+          "name": "Zijde"
+        },
+        "Wool": {
+          "name": "Wol"
+        },
+        "Sensitive": {
+          "name": "Gevoelig"
+        },
+        "Auto30": {
+          "name": "Auto 30"
+        },
+        "Auto40": {
+          "name": "Auto 40"
+        },
+        "Auto60": {
+          "name": "Auto 60"
+        },
+        "Chiffon": {
+          "name": "Fijne was"
+        },
+        "Curtains": {
+          "name": "Gordijnen"
+        },
+        "DarkWash": {
+          "name": "Donkere was"
+        },
+        "Dessous": {
+          "name": "Gemoedelijk"
+        },
+        "Monsoon": {
+          "name": "Natte was"
+        },
+        "Outdoor": {
+          "name": "Outdoor"
+        },
+        "PlushToy": {
+          "name": "Knuffels"
+        },
+        "ShirtsBlouses": {
+          "name": "Overhemden"
+        },
+        "SportFitness": {
+          "name": "Sport"
+        },
+        "Towels": {
+          "name": "Handdoeken"
+        },
+        "WaterProof": {
+          "name": "Waterdicht"
+        }
+      }
+    },
+    "Dryer": {
+      "Program": {
+        "Cotton": {
+          "name": "Katoen"
+        },
+        "Synthetic": {
+          "name": "Synthetisch"
+        },
+        "Mix": {
+          "name": "Mix"
+        },
+        "Blankets": {
+          "name": "Beddengoed"
+        },
+        "BusinessShirts": {
+          "name": "Overhemden"
+        },
+        "DownFeathers": {
+          "name": "Dons"
+        },
+        "Hygiene": {
+          "name": "Hygiene"
+        },
+        "Jeans": {
+          "name": "Spijkerstof"
+        },
+        "Outdoor": {
+          "name": "Outdoor"
+        },
+        "SyntheticRefresh": {
+          "name": "Synthetic Refresh"
+        },
+        "Towels": {
+          "name": "Handdoeken"
+        },
+        "Super40": {
+          "name": "Super 40"
+        },
+        "Shirts15": {
+          "name": "Shirts 15"
+        },
+        "Pillow": {
+          "name": "Kussens"
+        },
+        "AntiShrink": {
+          "name": "Anti-krimp"
+        }
+      }
+    }
+  },
+  "Cooking": {
+    "Oven": {
+      "Program": {
+        "HeatingMode": {
+          "PreHeating": {
+            "name": "Voorverwarmen",
+            "description": "Verwarm de oven voor."
+          },
+          "HotAir": {
+            "name": "Hete lucht"
+          },
+          "HotAirEco": {
+            "name": "Hete lucht Eco"
+          },
+          "HotAirGrilling": {
+            "name": "Hete lucht Grill"
+          },
+          "TopBottomHeating": {
+            "name": "TopBottomHeating"
+          },
+          "TopBottomHeatingEco": {
+            "name": "TopBottomHeatingEco"
+          },
+          "BottomHeating": {
+            "name": "Bodem verwarming"
+          },
+          "PizzaSetting": {
+            "name": "Pizza"
+          },
+          "SlowCook": {
+            "name": "Slow Cooking"
+          },
+          "IntensiveHeat": {
+            "name": "Intens"
+          },
+          "KeepWarm": {
+            "name": "Warm houden"
+          },
+          "PreheatOvenware": {
+            "name": "Ovenwaar voorverwarmen"
+          },
+          "FrozenHeatupSpecial": {
+            "name": "Frozen Heatup Special"
+          },
+          "Desiccation": {
+            "name": "Desiccation"
+          },
+          "Defrost": {
+            "name": "Ontdooien"
+          },
+          "Proof": {
+            "name": "Proof"
+          }
+        }
+      }
+    }
+  },
+  "ConsumerProducts": {
+    "CoffeeMaker": {
+      "Program": {
+        "Beverage": {
+          "Ristretto": {
+            "name": "Ristretto",
+            "description": "Very concentrated and thus especially aromatic espresso."
+          },
+          "Espresso": {
+            "name": "Espresso",
+            "description": "The classic: small, strong coffee with hazel crema."
+          },
+          "Espresso Doppio": {
+            "name": "Espresso Doppio",
+            "description": "Coffee Beverage with double filling compared to default espresso."
+          },
+          "Coffee": {
+            "name": "Coffee",
+            "description": "Large cup of coffee, brewed using espresso as the base."
+          },
+          "EspressoMacchiato": {
+            "name": "Espresso Macchiato",
+            "description": "Espresso with some milk froth; Italian for 'stained espresso'"
+          },
+          "Cappuccino": {
+            "name": "Cappuccino",
+            "description": "One third of each espresso, warm milk and milk froth"
+          },
+          "LatteMacchiato": {
+            "name": "Latte Macchiato",
+            "description": "Specialty with three layers, served in a glass: warm milk at the bottom, espresso in the middle, milk froth on top"
+          },
+          "CaffeLatte": {
+            "name": "Caffe Latte",
+            "description": "Half coffee, half warm milk; typically served in a bowl"
+          },
+          "MilkFroth": {
+            "name": "MilkFroth",
+            "description": "Frothed milk, e.g. for hot chocolate"
+          },
+          "WarmMilk": {
+            "name": "WarmMilk",
+            "description": "Heated (not steamed) milk"
+          }
+        },
+        "CoffeeWorld": {
+          "KleinerBrauner": {
+            "name": "Kleiner Brauner",
+            "description": "Austrian coffee speciality: Single espresso with a dash of warm milk"
+          },
+          "GrosserBrauner": {
+            "name": "Grosser Brauner",
+            "description": "Austrian coffee speciality: Double espresso with a dash of warm milk"
+          },
+          "Verlaengerter": {
+            "name": "Verlaengerter",
+            "description": "Austrian coffee speciality: Espresso diluted (\"verlängert\") with the same quantity of hot water"
+          },
+          "VerlaengerterBraun": {
+            "name": "Verlaengerter Braun",
+            "description": "Austrian coffee speciality: Verlängerter with a dash of warm milk"
+          },
+          "WienerMelange": {
+            "name": "Wiener Melange",
+            "description": "Austrian coffee speciality: Half espresso, half milk froth; stronger than a cappuccino"
+          },
+          "FlatWhite": {
+            "name": "Flat White",
+            "description": "Espresso topped with a specific style of silky frothed milk"
+          },
+          "Cortado": {
+            "name": "Cortado",
+            "description": "Colombian coffee speciality: Ristretto diluted with the same quantity of warm milk"
+          },
+          "CafeCortado": {
+            "name": "Cafe Cortado",
+            "description": "Spanish coffee speciality: Espresso with a dash of warm milk; Spanish for 'cut coffee'"
+          },
+          "CafeConLeche": {
+            "name": "Cafe ConLeche",
+            "description": "Spanish coffee speciality: Half coffee, half milk froth; with a brown milk froth on top"
+          },
+          "CafeAuLait": {
+            "name": "Cafe Au Lait",
+            "description": "French coffee speciality: Caffe latte with a high share of coffee; typically served for breakfast"
+          },
+          "Doppio": {
+            "name": "Doppio",
+            "description": "Italian coffee speciality: Double espresso; prepared with the double amount of ground coffee"
+          },
+          "Kaapi": {
+            "name": "Kaapi",
+            "description": "South Indian coffee speciality: Hot milk with two teaspoons of very intense coffee; typically sweetened"
+          },
+          "KoffieVerkeerd": {
+            "name": "Koffie Verkeerd",
+            "description": "Dutch coffee speciality: Mild caffe latte with more warm milk than coffee; inverted (\"verkeerd\"), as caffe latte usually has more coffee than milk"
+          },
+          "Galao": {
+            "name": "Galao",
+            "description": "Portuguese coffee speciality: Very mild caffe latte; typically served in a glass"
+          },
+          "Garoto": {
+            "name": "Garoto",
+            "description": "Portuguese coffee speciality: Half milk froth, half espresso; also referred to as '\"children's coffee\""
+          },
+          "Americano": {
+            "name": "Americano",
+            "description": "American coffee speciality: espresso diluted with two parts of hot water; easier to drink than a classic filter coffee"
+          },
+          "RedEye": {
+            "name": "Red Eye",
+            "description": "American coffee speciality: Coffee plus one espresso; a great wake up call after a late night"
+          },
+          "BlackEye": {
+            "name": "Black Eye",
+            "description": "American coffee speciality: Coffee plus two espressos for an extra kick caffeine"
+          },
+          "DeadEye": {
+            "name": "Dead Eye",
+            "description": "American coffee speciality: coffee with three espressos; for the ultimate caffeine kick."
+          }
+        }
+      }
+    }
+  },
+  "Dishcare": {
+    "Dishwasher": {
+      "Program": {
+        "Auto1": {
+          "name": "Auto 1",
+          "description": "Voor licht vieze vaat"
+        },
+        "Auto2": {
+          "name": "Auto 2",
+          "description": "Voor normale vaat"
+        },
+        "Auto3": {
+          "name": "Auto 3",
+          "description": "Voor vieze vaat"
+        },
+        "Eco50": {
+          "name": "Eco 50",
+          "description": "Mileuvriendelijk programma voor normale vaat"
+        },
+        "Quick45": {
+          "name": "Snel 45",
+          "description": "Snel programma voor licht vieze vaat"
+        },
+        "Intensiv70": {
+          "name": "Intensiv70",
+          "description": "Speciaal programma voor vieze vaat, zoals potten en pannen"
+        },
+        "Normal65": {
+          "name": "Normal65",
+          "description": "Programma voor zowel normale als vieze vaat"
+        },
+        "Glas40": {
+          "name": "Glass 40",
+          "description": "Rustig programma voor kwetsbare vaat"
+        },
+        "GlassCare": {
+          "name": "Glass Care",
+          "description": "Rustig programma voor kwetsbare vaat"
+        },
+        "NightWash": {
+          "name": "Night wash",
+          "description": "Stil programma voor normale vaat"
+        },
+        "Quick65": {
+          "name": "Quick65",
+          "description": "Snel programma voor licht vieze vaat"
+        },
+        "Normal45": {
+          "name": "Normal45",
+          "description": "Voor normale vaat"
+        },
+        "Intensiv45": {
+          "name": "Intensiv45",
+          "description": "Voor vieze vaat"
+        },
+        "AutoHalfLoad": {
+          "name": "AutoHalfLoad",
+          "description": "Programma voor een halfvolle machine. Verbruikt minder water"
+        },
+        "IntensivPower": {
+          "name": "IntensivPower",
+          "description": "Voor zeer vieze vaat, potten en pannen"
+        },
+        "MagicDaily": {
+          "name": "MagicDaily",
+          "description": "Kort en intensief programma voor dagelijks gebruik"
+        },
+        "Super60": {
+          "name": "Super60",
+          "description": "Voor vieze vaat"
+        },
+        "Kurz60": {
+          "name": "Kurz60",
+          "description": "Kort programma voor normale vaat"
+        },
+        "ExpressSparkle65": {
+          "name": "ExpressSparkle65",
+          "description": "Voor zeer vieze vaat, potten en pannen"
+        },
+        "MachineCare": {
+          "name": "Machine reiniging",
+          "description": "Gebruik met machinereiniger en zonder vaat"
+        },
+        "SteamFresh": {
+          "name": "SteamFresh",
+          "description": "Spoelt en droogt de vaat"
+        },
+        "MaximumCleaning": {
+          "name": "Maximale reiniging",
+          "description": "Voor zeer vieze vaat, potten en pannen"
+        }
+      }
+    }
+  }
+}

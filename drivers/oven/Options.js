@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OvenProgram = void 0;
+var OvenProgram;
+(function (OvenProgram) {
+    OvenProgram["PreHeating"] = "Cooking.Oven.Program.HeatingMode.PreHeating";
+    OvenProgram["HotAir"] = "Cooking.Oven.Program.HeatingMode.HotAir";
+    OvenProgram["HotAirEco"] = "Cooking.Oven.Program.HeatingMode.HotAirEco";
+    OvenProgram["HotAirGrilling"] = "Cooking.Oven.Program.HeatingMode.HotAirGrilling";
+    OvenProgram["TopBottomHeating"] = "Cooking.Oven.Program.HeatingMode.TopBottomHeating";
+    OvenProgram["TopBottomHeatingEco"] = "Cooking.Oven.Program.HeatingMode.TopBottomHeatingEco";
+    OvenProgram["BottomHeating"] = "Cooking.Oven.Program.HeatingMode.BottomHeating";
+    OvenProgram["PizzaSetting"] = "Cooking.Oven.Program.HeatingMode.PizzaSetting";
+    OvenProgram["SlowCook"] = "Cooking.Oven.Program.HeatingMode.SlowCook";
+    OvenProgram["IntensiveHeat"] = "Cooking.Oven.Program.HeatingMode.IntensiveHeat";
+    OvenProgram["KeepWarm"] = "Cooking.Oven.Program.HeatingMode.KeepWarm";
+    OvenProgram["PreheatOvenware"] = "Cooking.Oven.Program.HeatingMode.PreheatOvenware";
+    OvenProgram["FrozenHeatupSpecial"] = "Cooking.Oven.Program.HeatingMode.FrozenHeatupSpecial";
+    OvenProgram["Desiccation"] = "Cooking.Oven.Program.HeatingMode.Desiccation";
+    OvenProgram["Defrost"] = "Cooking.Oven.Program.HeatingMode.Defrost";
+    OvenProgram["Proof"] = "Cooking.Oven.Program.HeatingMode.Proof";
+})(OvenProgram || (exports.OvenProgram = OvenProgram = {}));

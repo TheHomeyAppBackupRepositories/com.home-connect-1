@@ -1,0 +1,34 @@
+{
+  "name": "com.home-connect",
+  "version": "1.0.0",
+  "description": "Adds support for Bosch-Siemens Home Connect",
+  "main": "app.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "validate": "homey app validate --level=verified",
+    "run": "homey app run",
+    "debug": "DEBUG=1 homey app run"
+  },
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eventsource": "^2.0.2",
+    "homey-oauth2app": "^3.5.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.11",
+    "@tsconfig/node16": "^1.0.4",
+    "@types/eventsource": "^1.1.11",
+    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.4",
+    "@types/node": "^20.3.1",
+    "eslint": "^8.43.0",
+    "eslint-config-athom": "^3.1.1",
+    "homey-oauth2app-types": "file:../@types/homey-oauth2app",
+    "typescript": "^5.1.3"
+  }
+}

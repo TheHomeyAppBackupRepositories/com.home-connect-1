@@ -1,0 +1,3 @@
+Welcome to Home Connect and to a whole new way of life. With Home Connect, you can control your home appliances easily: From the washing machine to the oven, to the coffee machine or the vacuum cleaner. The Home Connect app gives you access to all the relevant information at any time. It can not only switch your appliances on and off, it can also select programs, adjust timers, set appliances to eco mode and much more.
+
+Find out how Home Connect can help your household become more efficient and safer at the touch of a button. With Home Connect, you not only have the extensive functions of the app available to you, but also those of the connected partner services of the Home Connect ecosystem.

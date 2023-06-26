@@ -1,0 +1,398 @@
+{
+  "door": "Door",
+  "interior": "Interior",
+  "fridge": "Fridge",
+  "freezer": "Freezer",
+  "LaundryCare": {
+    "Washer": {
+      "Program": {
+        "Cotton": {
+          "name": "Cotton"
+        },
+        "EasyCare": {
+          "name": "EasyCare"
+        },
+        "Mix": {
+          "name": "Mix"
+        },
+        "DelicatesSilk": {
+          "name": "Silk"
+        },
+        "Wool": {
+          "name": "Wool"
+        },
+        "Sensitive": {
+          "name": "Sensitive"
+        },
+        "Auto30": {
+          "name": "Auto 30"
+        },
+        "Auto40": {
+          "name": "Auto 40"
+        },
+        "Auto60": {
+          "name": "Auto 60"
+        },
+        "Chiffon": {
+          "name": "Chiffon"
+        },
+        "Curtains": {
+          "name": "Curtains"
+        },
+        "DarkWash": {
+          "name": "Dark"
+        },
+        "Dessous": {
+          "name": "Dessous"
+        },
+        "Monsoon": {
+          "name": "Monsoon"
+        },
+        "Outdoor": {
+          "name": "Outdoor"
+        },
+        "PlushToy": {
+          "name": "PlushToy"
+        },
+        "ShirtsBlouses": {
+          "name": "Shirts/Blouses"
+        },
+        "SportFitness": {
+          "name": "Sport"
+        },
+        "Towels": {
+          "name": "Towels"
+        },
+        "WaterProof": {
+          "name": "WaterProof"
+        }
+      }
+    },
+    "Dryer": {
+      "Program": {
+        "Cotton": {
+          "name": "Cotton"
+        },
+        "Synthetic": {
+          "name": "Synthetic"
+        },
+        "Mix": {
+          "name": "Mix"
+        },
+        "Blankets": {
+          "name": "Blankets"
+        },
+        "BusinessShirts": {
+          "name": "Shirts/Blouses"
+        },
+        "DownFeathers": {
+          "name": "Down/Feathers"
+        },
+        "Hygiene": {
+          "name": "Hygiene"
+        },
+        "Jeans": {
+          "name": "Jeans"
+        },
+        "Outdoor": {
+          "name": "Outdoor"
+        },
+        "SyntheticRefresh": {
+          "name": "Synthetic Refresh"
+        },
+        "Towels": {
+          "name": "Towels"
+        },
+        "Super40": {
+          "name": "Super 40"
+        },
+        "Shirts15": {
+          "name": "Shirts 15"
+        },
+        "Pillow": {
+          "name": "Pillows"
+        },
+        "AntiShrink": {
+          "name": "Anti-shrink"
+        }
+      }
+    }
+  },
+  "Cooking": {
+    "Oven": {
+      "Program": {
+        "HeatingMode": {
+          "PreHeating": {
+            "name": "Pre-heating",
+            "description": "pre-heat the oven"
+          },
+          "HotAir": {
+            "name": "Hot air"
+          },
+          "HotAirEco": {
+            "name": "Hot air Eco"
+          },
+          "HotAirGrilling": {
+            "name": "HotAir Grill"
+          },
+          "TopBottomHeating": {
+            "name": "TopBottom Heating"
+          },
+          "TopBottomHeatingEco": {
+            "name": "TopBottom Heating Eco"
+          },
+          "BottomHeating": {
+            "name": "BottomHeating"
+          },
+          "PizzaSetting": {
+            "name": "PizzaSetting"
+          },
+          "SlowCook": {
+            "name": "Slow Cooking"
+          },
+          "IntensiveHeat": {
+            "name": "Intensive Heating"
+          },
+          "KeepWarm": {
+            "name": "Keep Warm"
+          },
+          "PreheatOvenware": {
+            "name": "Pre-heat Ovenware"
+          },
+          "FrozenHeatupSpecial": {
+            "name": "Frozen Heatup Special"
+          },
+          "Desiccation": {
+            "name": "Desiccation"
+          },
+          "Defrost": {
+            "name": "Defrost"
+          },
+          "Proof": {
+            "name": "Proof"
+          }
+        }
+      }
+    }
+  },
+  "ConsumerProducts": {
+    "CoffeeMaker": {
+      "Program": {
+        "Beverage": {
+          "Ristretto": {
+            "name": "Ristretto",
+            "description": "Very concentrated and thus especially aromatic espresso."
+          },
+          "Espresso": {
+            "name": "Espresso",
+            "description": "The classic: small, strong coffee with hazel crema."
+          },
+          "Espresso Doppio": {
+            "name": "Espresso Doppio",
+            "description": "Coffee Beverage with double filling compared to default espresso."
+          },
+          "Coffee": {
+            "name": "Coffee",
+            "description": "Large cup of coffee, brewed using espresso as the base."
+          },
+          "EspressoMacchiato": {
+            "name": "Espresso Macchiato",
+            "description": "Espresso with some milk froth; Italian for 'stained espresso'"
+          },
+          "Cappuccino": {
+            "name": "Cappuccino",
+            "description": "One third of each espresso, warm milk and milk froth"
+          },
+          "LatteMacchiato": {
+            "name": "Latte Macchiato",
+            "description": "Specialty with three layers, served in a glass: warm milk at the bottom, espresso in the middle, milk froth on top"
+          },
+          "CaffeLatte": {
+            "name": "Caffe Latte",
+            "description": "Half coffee, half warm milk; typically served in a bowl"
+          },
+          "MilkFroth": {
+            "name": "MilkFroth",
+            "description": "Frothed milk, e.g. for hot chocolate"
+          },
+          "WarmMilk": {
+            "name": "WarmMilk",
+            "description": "Heated (not steamed) milk"
+          }
+        },
+        "CoffeeWorld": {
+          "KleinerBrauner": {
+            "name": "Kleiner Brauner",
+            "description": "Austrian coffee speciality: Single espresso with a dash of warm milk"
+          },
+          "GrosserBrauner": {
+            "name": "Grosser Brauner",
+            "description": "Austrian coffee speciality: Double espresso with a dash of warm milk"
+          },
+          "Verlaengerter": {
+            "name": "Verlaengerter",
+            "description": "Austrian coffee speciality: Espresso diluted (\"verlängert\") with the same quantity of hot water"
+          },
+          "VerlaengerterBraun": {
+            "name": "Verlaengerter Braun",
+            "description": "Austrian coffee speciality: Verlängerter with a dash of warm milk"
+          },
+          "WienerMelange": {
+            "name": "Wiener Melange",
+            "description": "Austrian coffee speciality: Half espresso, half milk froth; stronger than a cappuccino"
+          },
+          "FlatWhite": {
+            "name": "Flat White",
+            "description": "Espresso topped with a specific style of silky frothed milk"
+          },
+          "Cortado": {
+            "name": "Cortado",
+            "description": "Colombian coffee speciality: Ristretto diluted with the same quantity of warm milk"
+          },
+          "CafeCortado": {
+            "name": "Cafe Cortado",
+            "description": "Spanish coffee speciality: Espresso with a dash of warm milk; Spanish for 'cut coffee'"
+          },
+          "CafeConLeche": {
+            "name": "Cafe ConLeche",
+            "description": "Spanish coffee speciality: Half coffee, half milk froth; with a brown milk froth on top"
+          },
+          "CafeAuLait": {
+            "name": "Cafe Au Lait",
+            "description": "French coffee speciality: Caffe latte with a high share of coffee; typically served for breakfast"
+          },
+          "Doppio": {
+            "name": "Doppio",
+            "description": "Italian coffee speciality: Double espresso; prepared with the double amount of ground coffee"
+          },
+          "Kaapi": {
+            "name": "Kaapi",
+            "description": "South Indian coffee speciality: Hot milk with two teaspoons of very intense coffee; typically sweetened"
+          },
+          "KoffieVerkeerd": {
+            "name": "Koffie Verkeerd",
+            "description": "Dutch coffee speciality: Mild caffe latte with more warm milk than coffee; inverted (\"verkeerd\"), as caffe latte usually has more coffee than milk"
+          },
+          "Galao": {
+            "name": "Galao",
+            "description": "Portuguese coffee speciality: Very mild caffe latte; typically served in a glass"
+          },
+          "Garoto": {
+            "name": "Garoto",
+            "description": "Portuguese coffee speciality: Half milk froth, half espresso; also referred to as '\"children's coffee\""
+          },
+          "Americano": {
+            "name": "Americano",
+            "description": "American coffee speciality: espresso diluted with two parts of hot water; easier to drink than a classic filter coffee"
+          },
+          "RedEye": {
+            "name": "Red Eye",
+            "description": "American coffee speciality: Coffee plus one espresso; a great wake up call after a late night"
+          },
+          "BlackEye": {
+            "name": "Black Eye",
+            "description": "American coffee speciality: Coffee plus two espressos for an extra kick caffeine"
+          },
+          "DeadEye": {
+            "name": "Dead Eye",
+            "description": "American coffee speciality: coffee with three espressos; for the ultimate caffeine kick."
+          }
+        }
+      }
+    }
+  },
+  "Dishcare": {
+    "Dishwasher": {
+      "Program": {
+        "Auto1": {
+          "name": "Auto 1",
+          "description": "For lightly soiled dishes"
+        },
+        "Auto2": {
+          "name": "Auto 2",
+          "description": "For normally soiled dishes"
+        },
+        "Auto3": {
+          "name": "Auto 3",
+          "description": "For highly soiled dishes"
+        },
+        "Eco50": {
+          "name": "Eco 50",
+          "description": "Eco-friendly program for normally soiled dishes"
+        },
+        "Quick45": {
+          "name": "Quick 45",
+          "description": "Particularly quick cleaning of lightly soiled dishes within approx. half an hour"
+        },
+        "Intensiv70": {
+          "name": "Intensiv70",
+          "description": "Special cleaning for highly soiled dishes, particularly for pots and pans"
+        },
+        "Normal65": {
+          "name": "Normal65",
+          "description": "Cleaning for medium up to highly soiled dishes, particularly for mixed dishes"
+        },
+        "Glas40": {
+          "name": "Glass 40",
+          "description": "Gentle cleaning of sensitive dishes, e.g. high-quality glasses"
+        },
+        "GlassCare": {
+          "name": "Glass Care",
+          "description": "A cycle for lightly soiled dishes which is ideal for temperature sensitive dishes or silverware."
+        },
+        "NightWash": {
+          "name": "Night wash",
+          "description": "Particularly gentle cleaning and drying of normally soiled dishes."
+        },
+        "Quick65": {
+          "name": "Quick65",
+          "description": "Particularly quick cleaning of normally soiled dishes."
+        },
+        "Normal45": {
+          "name": "Normal45",
+          "description": "Recommended for daily, regular or typical use to completely wash a full load of normally soiled dishes."
+        },
+        "Intensiv45": {
+          "name": "Intensiv45",
+          "description": "Intensive and economical program for heavily soiled dishes, pots, glasses."
+        },
+        "AutoHalfLoad": {
+          "name": "AutoHalfLoad",
+          "description": "Reduced water consumption when washing small, lightly soiled loads."
+        },
+        "IntensivPower": {
+          "name": "IntensivPower",
+          "description": "Special cleaning for dishes with heavy or burnt-in soiling, particularly for pots and pans."
+        },
+        "MagicDaily": {
+          "name": "MagicDaily",
+          "description": "Time-optimised with intensive cleaning and drying for daily use."
+        },
+        "Super60": {
+          "name": "Super60",
+          "description": "Maximum cleaning and drying performance for highly soiled dishes."
+        },
+        "Kurz60": {
+          "name": "Kurz60",
+          "description": "Time-optimised, for normally soiled dishes."
+        },
+        "ExpressSparkle65": {
+          "name": "ExpressSparkle65",
+          "description": "Special cleaning for dishes with heavy or burnt-in soiling, particularly for pots and pans."
+        },
+        "MachineCare": {
+          "name": "MachineCare",
+          "description": "Machine cleaning cycle. Without dishes, using machine cleaning detergent."
+        },
+        "SteamFresh": {
+          "name": "SteamFresh",
+          "description": "Rinsing and hygienic drying."
+        },
+        "MaximumCleaning": {
+          "name": "Maximum Cleaning",
+          "description": "Special cleaning for heavily soiled, greasy dishes, particularly for pots and pans."
+        }
+      }
+    }
+  }
+}

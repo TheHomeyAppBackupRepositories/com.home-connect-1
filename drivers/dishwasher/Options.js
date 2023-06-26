@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DishwasherProgram = void 0;
+var DishwasherProgram;
+(function (DishwasherProgram) {
+    DishwasherProgram["Auto1"] = "Dishcare.Dishwasher.Program.Auto1";
+    DishwasherProgram["Auto2"] = "Dishcare.Dishwasher.Program.Auto2";
+    DishwasherProgram["Auto3"] = "Dishcare.Dishwasher.Program.Auto3";
+    DishwasherProgram["Eco50"] = "Dishcare.Dishwasher.Program.Eco50";
+    DishwasherProgram["Quick45"] = "Dishcare.Dishwasher.Program.Quick45";
+    DishwasherProgram["Intensiv70"] = "Dishcare.Dishwasher.Program.Intensiv70";
+    DishwasherProgram["Normal65"] = "Dishcare.Dishwasher.Program.Normal65";
+    DishwasherProgram["Glas40"] = "Dishcare.Dishwasher.Program.Glas40";
+    DishwasherProgram["GlassCare"] = "Dishcare.Dishwasher.Program.GlassCare";
+    DishwasherProgram["NightWash"] = "Dishcare.Dishwasher.Program.NightWash";
+    DishwasherProgram["Quick65"] = "Dishcare.Dishwasher.Program.Quick65";
+    DishwasherProgram["Normal45"] = "Dishcare.Dishwasher.Program.Normal45";
+    DishwasherProgram["Intensiv45"] = "Dishcare.Dishwasher.Program.Intensiv45";
+    DishwasherProgram["AutoHalfLoad"] = "Dishcare.Dishwasher.Program.AutoHalfLoad";
+    DishwasherProgram["IntensivPower"] = "Dishcare.Dishwasher.Program.IntensivPower";
+    DishwasherProgram["MagicDaily"] = "Dishcare.Dishwasher.Program.MagicDaily";
+    DishwasherProgram["Super60"] = "Dishcare.Dishwasher.Program.Super60";
+    DishwasherProgram["Kurz60"] = "Dishcare.Dishwasher.Program.Kurz60";
+    DishwasherProgram["ExpressSparkle65"] = "Dishcare.Dishwasher.Program.ExpressSparkle65";
+    DishwasherProgram["MachineCare"] = "Dishcare.Dishwasher.Program.MachineCare";
+    DishwasherProgram["SteamFresh"] = "Dishcare.Dishwasher.Program.SteamFresh";
+    DishwasherProgram["MaximumCleaning"] = "Dishcare.Dishwasher.Program.MaximumCleaning";
+})(DishwasherProgram || (exports.DishwasherProgram = DishwasherProgram = {}));
