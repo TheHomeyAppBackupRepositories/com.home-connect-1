@@ -29,24 +29,35 @@ class HomeConnectDeviceHood extends HomeConnectDevice_1.default {
     supportsStandbyPowerState() {
         return false;
     }
-    _parseNotify(key, value) {
-        if (key === levelMap['venting'] || key === levelMap['intensive']) {
-            const level = Util_1.default.keyByValue(ventingLevelMap, value);
-            if (!level.includes('off')) {
-                return this.setCapabilityValue('venting_level', level);
-            }
-        }
-        return Promise.resolve();
-    }
     async onOAuth2Init() {
         await super.onOAuth2Init();
+        this.listenFor('Cooking.Common.Option.Hood.VentingLevel', this.onLevel.bind(this));
+        this.listenFor('Cooking.Common.Option.Hood.IntensiveLevel', this.onLevel.bind(this));
+        this.listenFor('Cooking.Common.Setting.LightingBrightness', async (value) => {
+            await this.checkDimCapability();
+            const brightness = Util_1.default.scale(value, [10.0, 100.0], [0.0, 1.0]);
+            this.log(`Setting brightness to ${brightness}, mapped from ${value}`);
+            await this.setCapabilityValue("dim", brightness);
+        });
+        this.listenFor('Cooking.Common.Setting.Lighting', async (value) => {
+            await this.checkDimCapability();
+            if (!value) {
+                await this.setCapabilityValue("dim", 0);
+            }
+        });
         this.registerCapabilityListener('venting_level', this.onCapabilityVentingLevel.bind(this));
         if (this.hasCapability("dim")) {
             this.registerLightCapabilityListener();
         }
     }
+    async onLevel(value) {
+        const level = Util_1.default.keyByValue(ventingLevelMap, value);
+        if (!level.includes('off')) {
+            return this.setCapabilityValue('venting_level', level);
+        }
+    }
     async startVenting(level, ventingLevel) {
-        return this._setProgram(Options_1.HoodProgram.Venting, [
+        return this.setProgram(Options_1.HoodProgram.Venting, [
             {
                 key: level,
                 value: ventingLevel,
@@ -54,25 +65,13 @@ class HomeConnectDeviceHood extends HomeConnectDevice_1.default {
         ]);
     }
     async startProgram(programId) {
-        return this._setProgram(programId, []);
+        return this.setProgram(programId, []);
     }
-    async _parseSetting(key, value) {
-        if (key === "Cooking.Common.Setting.LightingBrightness" || key === "Cooking.Common.Setting.Lighting") {
-            if (!this.hasCapability("dim")) {
-                this.log("Detected hood lighting support");
-                await this.addCapability("dim");
-                this.registerLightCapabilityListener();
-            }
-            if (key === "Cooking.Common.Setting.Lighting") {
-                if (!value) {
-                    await this.setCapabilityValue("dim", 0);
-                }
-            }
-            else {
-                const brightness = Util_1.default.scale(value, [10.0, 100.0], [0.0, 1.0]);
-                this.log(`Setting brightness to ${brightness}, mapped from ${value}`);
-                await this.setCapabilityValue("dim", brightness);
-            }
+    async checkDimCapability() {
+        if (!this.hasCapability("dim")) {
+            this.log("Detected hood lighting support");
+            await this.addCapability("dim");
+            this.registerLightCapabilityListener();
         }
     }
     registerLightCapabilityListener() {

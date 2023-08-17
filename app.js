@@ -6,11 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const homey_oauth2app_1 = require("homey-oauth2app");
 const homey_1 = require("homey");
 const HomeConnectOAuth2Client_1 = __importDefault(require("./lib/HomeConnectOAuth2Client"));
+const RateLimiters_1 = __importDefault(require("./lib/RateLimiters"));
 const SCOPES = [
     'IdentifyAppliance',
     'Monitor',
     'Control',
-    // 'Images',
+    'Images',
     'Settings',
 ];
 const DEBUG = false;
@@ -38,7 +39,13 @@ class HomeConnectApp extends homey_oauth2app_1.OAuth2App {
         this.homey.flow.getActionCard('program_stop').registerRunListener(args => {
             return args.device.stopProgram();
         });
+        this.homey.flow.getActionCard('open_door').registerRunListener(args => {
+            return args.device.openDoor();
+        });
         this.log('HomeConnectApp is running...');
+    }
+    async onUninit() {
+        await RateLimiters_1.default.onUninit(this);
     }
 }
 module.exports = HomeConnectApp;

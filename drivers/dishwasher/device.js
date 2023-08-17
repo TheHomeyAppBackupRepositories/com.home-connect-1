@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const HomeConnectDevice_1 = __importDefault(require("../../lib/HomeConnectDevice"));
-const Options_1 = require("./Options");
 const programMap = {
     auto1: 'Dishcare.Dishwasher.Program.Auto1',
     auto2: 'Dishcare.Dishwasher.Program.Auto2',
@@ -28,9 +27,9 @@ class HomeConnectDeviceDishwasher extends HomeConnectDevice_1.default {
         const programFlowCard = this.homey.flow.getActionCard('program_dishwasher');
         programFlowCard.registerRunListener(async (args) => {
             const key = ((typeof args.program === 'string') ? programMap[args.program] : args.program.key);
-            return this._setProgram(key, []);
+            return this.setProgram(key, []);
         });
-        await this.setProgramAutoComplete(programFlowCard, Object.values(Options_1.DishwasherProgram)).catch(this.error);
+        await this.setProgramAutoComplete(programFlowCard);
     }
     async _parseStatus(key, value) {
         if (key === 'BSH.Common.Status.DoorState') {

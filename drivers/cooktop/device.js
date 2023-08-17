@@ -12,13 +12,6 @@ class HomeConnectDeviceCooktop extends HomeConnectDevice_1.default {
     supportsStandbyPowerState() {
         return false;
     }
-    _parseNotify(key, value) {
-        return Promise.resolve();
-    }
-    async _parseSetting(key, value) {
-        this.log(key, value);
-        return;
-    }
     async onOAuth2Init() {
         await super.onOAuth2Init();
     }

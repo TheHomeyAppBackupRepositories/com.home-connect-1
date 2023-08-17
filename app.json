@@ -20,12 +20,60 @@
     "small": "/assets/images/small.png"
   },
   "category": "appliances",
-  "version": "3.2.17",
+  "version": "3.2.30",
   "author": {
     "name": "Home Connect GmbH"
   },
   "flow": {
     "triggers": [
+      {
+        "id": "bshc_onoff_false",
+        "highlight": true,
+        "title": {
+          "en": "Turned off",
+          "nl": "Uitgezet",
+          "de": "Ausgeschaltet",
+          "fr": "Désactivé",
+          "it": "Disattivato",
+          "sv": "Inaktiverad",
+          "no": "Slått av",
+          "es": "Apagado",
+          "da": "Slukket",
+          "ru": "Выключено",
+          "pl": "Wyłączone"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop"
+          }
+        ]
+      },
+      {
+        "id": "bshc_onoff_true",
+        "highlight": true,
+        "title": {
+          "en": "Turned on",
+          "nl": "Aangezet ",
+          "de": "Angeschaltet",
+          "fr": "Activé",
+          "it": "Attivato",
+          "sv": "Aktiverad",
+          "no": "Slått på",
+          "es": "Encendido",
+          "da": "Tændt",
+          "ru": "Включено",
+          "pl": "Włączone"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop"
+          }
+        ]
+      },
       {
         "title": {
           "en": "The door has been closed",
@@ -125,7 +173,47 @@
         ]
       }
     ],
+    "conditions": [
+      {
+        "id": "bshc_onoff",
+        "highlight": true,
+        "title": {
+          "en": "Is turned !{{on|off}}",
+          "nl": "Is !{{aan|uit}}",
+          "de": "Ist !{{an|aus}}",
+          "fr": "Est !{{activé|désactivé}}",
+          "it": "È !{{attivato|disattivato}}",
+          "sv": "Är !{{på|av}}",
+          "no": "Er slått !{{på|av}}",
+          "es": "Está !{{encendido|apagado}}",
+          "da": "Er !{{tændt|slukket}}",
+          "ru": "!{{Вкл.|Выкл.}}",
+          "pl": "Jest !{{włączone|wyłączone}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop"
+          }
+        ]
+      }
+    ],
     "actions": [
+      {
+        "title": {
+          "en": "Open door",
+          "nl": "Deur openen"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=oven|fridge|freezer|refrigerator"
+          }
+        ],
+        "id": "open_door"
+      },
       {
         "title": {
           "en": "Start Program",
@@ -755,7 +843,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "coffee"
+      "id": "coffee",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "id": "cooktop",
@@ -886,7 +985,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "dishwasher"
+      "id": "dishwasher",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -954,7 +1064,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "dryer"
+      "id": "dryer",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -1017,7 +1138,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "freezer"
+      "id": "freezer",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -1091,7 +1223,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "fridge"
+      "id": "fridge",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "id": "hood",
@@ -1223,7 +1366,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "oven"
+      "id": "oven",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -1286,7 +1440,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "refrigerator"
+      "id": "refrigerator",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -1400,7 +1565,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "washer"
+      "id": "washer",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -1467,7 +1643,18 @@
           "template": "login_oauth2"
         }
       ],
-      "id": "washer-dryer"
+      "id": "washer-dryer",
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     },
     {
       "id": "winecooler",
@@ -1550,7 +1737,18 @@
       "images": {
         "large": "/drivers/winecooler/assets/images/large.png",
         "small": "/drivers/winecooler/assets/images/small.png"
-      }
+      },
+      "settings": [
+        {
+          "id": "activateZone",
+          "type": "checkbox",
+          "value": true,
+          "label": {
+            "en": "Activate zone on contact alarm",
+            "nl": "Open deur activeert zone"
+          }
+        }
+      ]
     }
   ],
   "capabilities": {

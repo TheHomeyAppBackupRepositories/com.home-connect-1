@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const HomeConnectDevice_1 = __importDefault(require("../../lib/HomeConnectDevice"));
-const Options_1 = require("./Options");
 const programMap = {
     preheat: 'Cooking.Oven.Program.HeatingMode.PreHeating',
     pizza: 'Cooking.Oven.Program.HeatingMode.PizzaSetting',
@@ -20,6 +19,9 @@ class HomeConnectDeviceOven extends HomeConnectDevice_1.default {
     }
     async onOAuth2Init() {
         await super.onOAuth2Init();
+        this.listenFor('Cooking.Oven.Status.CurrentCavityTemperature', async (value) => {
+            await this.setCapabilityValue('measure_temperature', value);
+        });
         // Get a list of available programs and find them in the 'AllPrograms' array,
         // which is the data shown to the user.
         const programFlowCard = this.homey.flow.getActionCard('program_oven');
@@ -40,24 +42,9 @@ class HomeConnectDeviceOven extends HomeConnectDevice_1.default {
                     unit: 'seconds',
                 });
             }
-            return this._setProgram(key, options);
+            return this.setProgram(key, options);
         });
-        await this.setProgramAutoComplete(programFlowCard, Object.values(Options_1.OvenProgram));
-    }
-    async _parseStatus(key, value) {
-        if (key === 'Cooking.Oven.Status.CurrentCavityTemperature') {
-            return this.setCapabilityValue('measure_temperature', value);
-        }
-        if (key === 'BSH.Common.Status.DoorState') {
-            return this.setCapabilityValue('alarm_contact', value === 'BSH.Common.EnumType.DoorState.Open');
-        }
-        return Promise.resolve();
-    }
-    async _parseNotify(key, value) {
-        if (key === 'Cooking.Oven.Status.CurrentCavityTemperature') {
-            return this.setCapabilityValue('measure_temperature', value);
-        }
-        return Promise.resolve();
+        await this.setProgramAutoComplete(programFlowCard);
     }
 }
 module.exports = HomeConnectDeviceOven;

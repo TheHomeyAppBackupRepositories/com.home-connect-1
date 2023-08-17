@@ -3,6 +3,7 @@
   "interior": "Interior",
   "fridge": "Fridge",
   "freezer": "Freezer",
+  "language": "en-US",
   "LaundryCare": {
     "Washer": {
       "Program": {

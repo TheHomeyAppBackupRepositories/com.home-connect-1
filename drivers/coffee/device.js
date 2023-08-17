@@ -22,6 +22,21 @@ class HomeConnectDeviceCoffee extends HomeConnectDevice_1.default {
     }
     async onOAuth2Init() {
         await super.onOAuth2Init();
+        this.listenFor('ConsumerProducts.CoffeeMaker.Event.WaterTankEmpty', async (value) => {
+            await this.homey.flow.getDeviceTriggerCard('water_tank_empty')
+                .trigger(this);
+        });
+        this.listenFor('ConsumerProducts.CoffeeMaker.Event.BeanContainerEmpty', async (value) => {
+            await this.homey.flow.getDeviceTriggerCard('bean_container_empty')
+                .trigger(this);
+        });
+        this.listenFor('ConsumerProducts.CoffeeMaker.Event.DripTrayFull', async (value) => {
+            await this.homey.flow.getDeviceTriggerCard('drip_tray_full')
+                .trigger(this);
+        });
+        this.listenFor('BSH.Common.Status.DoorState', async (value) => {
+            await this.setCapabilityValue('alarm_contact', value === 'BSH.Common.EnumType.DoorState.Open');
+        });
         const programFlowCard = this.homey.flow.getActionCard('program_coffee');
         programFlowCard.registerRunListener(async (args) => {
             // Note: if program is a string, this is a legacy flow. No need to take care of it
@@ -40,28 +55,9 @@ class HomeConnectDeviceCoffee extends HomeConnectDevice_1.default {
                     value: args.fill_quantity,
                 });
             }
-            return this._setProgram(key, options);
+            return this.setProgram(key, options);
         });
-        await this.setProgramAutoComplete(programFlowCard, Object.values(Options_1.CoffeeProgram));
-    }
-    async _parseEvent(key, value) {
-        if (key === 'ConsumerProducts.CoffeeMaker.Event.WaterTankEmpty') {
-            await this.homey.flow.getDeviceTriggerCard('water_tank_empty')
-                .trigger(this);
-        }
-        if (key === 'ConsumerProducts.CoffeeMaker.Event.BeanContainerEmpty') {
-            await this.homey.flow.getDeviceTriggerCard('bean_container_empty')
-                .trigger(this);
-        }
-        if (key === 'ConsumerProducts.CoffeeMaker.Event.DripTrayFull') {
-            await this.homey.flow.getDeviceTriggerCard('drip_tray_full')
-                .trigger(this);
-        }
-    }
-    async _parseStatus(key, value) {
-        if (key === 'BSH.Common.Status.DoorState') {
-            await this.setCapabilityValue('alarm_contact', value === 'BSH.Common.EnumType.DoorState.Open');
-        }
+        await this.setProgramAutoComplete(programFlowCard);
     }
 }
 module.exports = HomeConnectDeviceCoffee;

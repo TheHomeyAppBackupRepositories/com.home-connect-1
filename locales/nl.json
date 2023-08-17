@@ -3,6 +3,7 @@
   "interior": "Binnenkant",
   "fridge": "Koelkast",
   "freezer": "vriezer",
+  "language": "nl-NL",
   "LaundryCare": {
     "Washer": {
       "Program": {
