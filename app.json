@@ -20,7 +20,7 @@
     "small": "/assets/images/small.png"
   },
   "category": "appliances",
-  "version": "3.2.30",
+  "version": "3.2.50",
   "author": {
     "name": "Home Connect GmbH"
   },
@@ -131,6 +131,62 @@
         "id": "program_started"
       },
       {
+        "id": "remote_control_active_false",
+        "title": {
+          "en": "Remote control turned off",
+          "nl": "Aansturen op afstand uitgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
+          }
+        ]
+      },
+      {
+        "id": "remote_control_active_true",
+        "title": {
+          "en": "Remote control turned on",
+          "nl": "Aansturen op afstand aangezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
+          }
+        ]
+      },
+      {
+        "id": "remote_control_start_allowed_false",
+        "title": {
+          "en": "Remote start turned off",
+          "nl": "Starten op afstand uitgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
+          }
+        ]
+      },
+      {
+        "id": "remote_control_start_allowed_true",
+        "title": {
+          "en": "Remote start turned on",
+          "nl": "Starten op afstand aangezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
+          }
+        ]
+      },
+      {
         "id": "water_tank_empty",
         "title": {
           "en": "Water tank is empty",
@@ -171,6 +227,34 @@
             "filter": "driver_id=coffee"
           }
         ]
+      },
+      {
+        "id": "salt_nearly_empty",
+        "title": {
+          "en": "Salt nearly empty",
+          "nl": "Zout bijna op"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dishwasher"
+          }
+        ]
+      },
+      {
+        "id": "rinse_aid_nearly_empty",
+        "title": {
+          "en": "Rinse aid nearly empty",
+          "nl": "Glansspoelmiddel bijna op"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dishwasher"
+          }
+        ]
       }
     ],
     "conditions": [
@@ -195,6 +279,34 @@
             "name": "device",
             "type": "device",
             "filter": "driver_id=cooktop"
+          }
+        ]
+      },
+      {
+        "id": "remote_control_active",
+        "title": {
+          "en": "Remote control is !{{on|off}}",
+          "nl": "Aansturen op afstand is !{{toegestaan|niet toegestaan}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
+          }
+        ]
+      },
+      {
+        "id": "remote_control_start_allowed",
+        "title": {
+          "en": "Remote start is !{{on|off}}",
+          "nl": "Starten op afstand is !{{aan|uit}}"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=cooktop|hood|oven|warming-drawer|dishwasher|dryer|washer|washer-dryer"
           }
         ]
       }
@@ -1807,6 +1919,26 @@
         "en": "Generic String"
       },
       "icon": "/assets/progress.svg"
+    },
+    "remote_control_active": {
+      "type": "boolean",
+      "title": {
+        "en": "Remote control active",
+        "nl": "Aansturen op afstand actief"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "remote_control_start_allowed": {
+      "type": "boolean",
+      "title": {
+        "en": "Remote start allowed",
+        "nl": "Starten op afstand toegestaan"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     },
     "venting_level": {
       "type": "enum",

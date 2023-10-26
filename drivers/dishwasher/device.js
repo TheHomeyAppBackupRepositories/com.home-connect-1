@@ -23,6 +23,14 @@ class HomeConnectDeviceDishwasher extends HomeConnectDevice_1.default {
         if (!this.hasCapability('onoff')) {
             await this.addCapability('onoff');
         }
+        this.listenFor('Dishcare.Dishwasher.Event.SaltNearlyEmpty', async (_) => {
+            await this.homey.flow.getDeviceTriggerCard('salt_nearly_empty')
+                .trigger(this);
+        });
+        this.listenFor('Dishcare.Dishwasher.Event.RinseAidNearlyEmpty', async (_) => {
+            await this.homey.flow.getDeviceTriggerCard('rinse_aid_nearly_empty')
+                .trigger(this);
+        });
         await super.onOAuth2Init();
         const programFlowCard = this.homey.flow.getActionCard('program_dishwasher');
         programFlowCard.registerRunListener(async (args) => {

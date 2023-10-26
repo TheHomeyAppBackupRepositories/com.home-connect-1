@@ -12,9 +12,6 @@ class HomeConnectDeviceCooktop extends HomeConnectDevice_1.default {
     supportsStandbyPowerState() {
         return false;
     }
-    async onOAuth2Init() {
-        await super.onOAuth2Init();
-    }
 }
 exports.HomeConnectDeviceCooktop = HomeConnectDeviceCooktop;
 module.exports = HomeConnectDeviceCooktop;

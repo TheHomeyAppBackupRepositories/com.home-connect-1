@@ -11,9 +11,5 @@ class HomeConnectDeviceCleaningRobot extends HomeConnectDevice_1.default {
     supportsStandbyPowerState() {
         return true;
     }
-    async onOAuth2Init() {
-        await super.onOAuth2Init();
-        // TODO: The rest.
-    }
 }
 module.exports = HomeConnectDeviceCleaningRobot;
